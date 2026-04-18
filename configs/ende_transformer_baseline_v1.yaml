@@ -40,3 +40,36 @@ model:
 
     tied_embeddings: false
     tied_softmax: false
+
+training:
+    model_dir: "outputs/ende_transformer_baseline_v1"
+
+    overwrite: false
+    random_seed: 42
+    use_cuda: true
+
+    optimizer: "adam"
+    learning_rate: 0.0005
+    learning_rate_min: 1.0e-06
+    scheduling: "plateau"
+    patience: 5
+    decrease_factor: 0.7
+
+    loss: "crossentropy"
+    label_smoothing: 0.0
+
+    batch_size: 2048
+    batch_type: "token"
+    batch_multiplier: 1
+
+    clip_grad_norm: 1.0
+
+    epochs: 20
+    validation_freq: 1000
+    logging_freq: 100
+
+    early_stopping_metric: "bleu"
+    keep_best_ckpts: 3
+    shuffle: true
+
+    print_valid_sents: [0, 1, 2]
