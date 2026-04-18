@@ -1,0 +1,16 @@
+data:
+    src: "eng"
+    trg: "deu"
+
+    train: "data/deu-eng/train"
+    dev: "data/deu-eng/dev"
+    test: "data/deu-eng/test1"
+
+    level: "word"
+    lowercase: false
+    max_sent_length: 100
+
+    src_vocab_max_size: 30000
+    trg_vocab_max_size: 30000
+    src_vocab_min_freq: 2
+    trg_vocab_min_freq: 2
